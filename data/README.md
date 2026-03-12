@@ -56,7 +56,7 @@ Provides a high-level summary of the insurance portfolio:
 - claim rate by car type
 - claim rate by city population
 
-![Portfolio Overview](powerbi/portfolio_overview.png)
+![Portfolio Overview](../powerbi/portfolio_overview.PNG)
 
 ---
 
@@ -69,7 +69,7 @@ Analyzes claim risk across customer segments:
 - claim rate by education
 - claim rate by vehicle points
 
-![Customer Risk](powerbi/customer_risk.png)
+![Customer Risk](../powerbi/customer_risk.PNG)
 
 ---
 
@@ -82,7 +82,7 @@ Explores vehicle-related risk factors:
 - claim rate by car use
 - scatter analysis of vehicle value vs claim amount
 
-![Vehicle Risk](powerbi/vehicle_risk.png)
+![Vehicle Risk](../powerbi/vehicle_risk.PNG)
 
 ---
 
