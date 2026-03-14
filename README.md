@@ -133,7 +133,9 @@ pip install pandas sqlalchemy pyodbc openpyxl
 insurance-analytics-azure-powerbi
 │
 ├── data/
+│   ├── dataset
 │   └── dataset_description
+│ 
 │
 ├── python/
 │   └── pipeline.py
@@ -150,13 +152,16 @@ insurance-analytics-azure-powerbi
 │   ├── customer_risk.png
 │   └── vehicle_risk.png
 │
+├── .env.example
+├── .gitignore
+├── requirements.txt
 └── README.md
 ```
 
 ### 3. Folder description
 
-- **data/** : dataset or dataset description  
-- **python/** : data preprocessing scripts  
+- **data/** : dataset and dataset description  
+- **python/** : data preprocessing and data pipeline  
 - **sql/** : SQL views used to compute risk metrics  
 - **powerbi/** : Power BI dashboard file  
 - **images/** : dashboard screenshots used in the README  
