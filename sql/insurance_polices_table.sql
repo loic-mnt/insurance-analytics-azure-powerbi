@@ -1,0 +1,32 @@
+DROP TABLE IF EXISTS insurance_policies;
+
+CREATE TABLE insurance_policies (
+    row_id INT IDENTITY(1,1) PRIMARY KEY,
+    id BIGINT,
+    driving_children INT,
+    dob DATE,
+    age INT,
+    home_children INT,
+    years_on_job INT,
+    income INT,
+    single_parent INT,
+    home_value FLOAT,
+    marital_status VARCHAR(20),
+    gender VARCHAR(10),
+    education VARCHAR(50),
+    occupation VARCHAR(50),
+    travel_time INT,
+    car_use VARCHAR(20),
+    vehicle_value FLOAT,
+    time_in_force INT,
+    car_type VARCHAR(30),
+    red_car INT,
+    total_claims_5_years INT,
+    claims_frequency_5_years INT,
+    license_revoked INT,
+    vehicle_points INT,
+    claims_amount INT,
+    car_age INT,
+    claims_flag_crash INT,
+    city_population VARCHAR(20)
+);
