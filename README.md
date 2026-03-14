@@ -139,6 +139,7 @@ insurance-analytics-azure-powerbi
 │   └── pipeline.py
 │
 ├── sql/
+│   ├── insurance_policies_table
 │   └── views.sql
 │
 ├── powerbi/
