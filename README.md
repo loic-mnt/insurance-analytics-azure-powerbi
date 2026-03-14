@@ -24,6 +24,7 @@ This pipeline demonstrates how raw data can be transformed into analytical insig
 
 ---
 
+
 ## Dataset
 
 **Dataset:** Car Insurance Claim Dataset  
@@ -40,6 +41,26 @@ The dataset contains information about insurance policyholders, including:
 Each row represents **one insurance policy**.
 
 ---
+
+## Data Pipeline
+
+The data pipeline is implemented in Python and performs three main steps:
+
+1. **Data preprocessing**
+   - Load the raw dataset
+   - Standardize column names
+   - Convert categorical variables to SQL-compatible formats
+   - Convert binary features to numeric flags (0/1)
+
+2. **Data loading**
+   - The cleaned dataset is uploaded to an Azure SQL table (`insurance_policies`)
+   - Data is inserted in batches using SQLAlchemy
+
+3. **Analytical layer**
+   - SQL views are created automatically to compute portfolio KPIs and risk metrics
+   - These views are later consumed directly by Power BI
+
+This design separates **data storage**, **data transformation**, and **data visualization**, following common data engineering practices.
 
 ## Dashboard Overview
 
@@ -98,32 +119,40 @@ This project combines several tools commonly used in modern data workflows:
 
 ---
 
-## Repository Structure
+## How to Run the Project
+
+### 1. Install dependencies
+
+```
+pip install pandas sqlalchemy pyodbc openpyxl
+```
+
+### 2. Repository Structure
 
 ```
 insurance-analytics-azure-powerbi
 │
-├── data/                     # Raw or processed datasets
+├── data/
 │   └── dataset_description
 │
-├── python/                   # Python scripts for preprocessing
-│   └── data_preprocessing.py
+├── python/
+│   └── pipeline.py
 │
-├── sql/                      # SQL queries and views
+├── sql/
 │   └── views.sql
 │
-├── powerbi/                  # Power BI dashboard file
+├── powerbi/
 │   └── insurance_dashboard.pbix
 │
-├── images/                   # Dashboard screenshots used in README
+├── images/
 │   ├── portfolio_overview.png
 │   ├── customer_risk.png
 │   └── vehicle_risk.png
 │
-└── README.md                 # Project documentation
+└── README.md
 ```
 
-### Folder description
+### 3. Folder description
 
 - **data/** : dataset or dataset description  
 - **python/** : data preprocessing scripts  
@@ -146,7 +175,6 @@ Some initial insights from the analysis:
 
 ## Author
 
-**Loïc Mwana Nteba**  
-
+**Loïc Mwana-Nteba**  
 
 
